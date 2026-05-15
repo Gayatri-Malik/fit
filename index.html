@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Haryana School Admissions 2026-27 | Unified Entrance Exam</title>
-    <!-- Google Fonts & Professional Styling -->
+    <title>K.R. Mangalam World School | Staff Connect & Extra Class Scheduler</title>
+    <!-- Google Fonts & Font Awesome -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -15,650 +15,580 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            background: #f0f7ff;
-            color: #1a2c3e;
-            line-height: 1.4;
+            background: #f4f7fc;
+            color: #1e2a3e;
+            padding: 2rem 1.5rem;
         }
 
-        /* background pattern subtle */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(#cbd5e1 0.8px, transparent 0.8px);
-            background-size: 24px 24px;
-            opacity: 0.3;
-            pointer-events: none;
-            z-index: -2;
-        }
-
-        /* main container */
-        .wrapper {
+        .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 1.5rem 2rem;
         }
 
         /* header */
-        .hero {
-            background: linear-gradient(135deg, #0b2b40 0%, #1a4a6f 100%);
+        .school-header {
+            background: linear-gradient(135deg, #0b3b3f 0%, #1b5e5a 100%);
             border-radius: 2rem;
-            padding: 2rem 2rem;
-            margin-bottom: 2rem;
+            padding: 1.8rem 2.2rem;
+            margin-bottom: 2.5rem;
             color: white;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
         }
 
-        .hero::after {
-            content: "🎓";
-            font-size: 8rem;
-            position: absolute;
-            bottom: -20px;
-            right: 10px;
-            opacity: 0.08;
-            pointer-events: none;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
+        .school-header h1 {
+            font-size: 2rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
+            letter-spacing: -0.3px;
         }
 
-        .hero h1 i {
-            color: #ffd966;
+        .school-header h1 i {
             margin-right: 12px;
+            color: #ffd966;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 700px;
-        }
-
-        .badge-date {
-            display: inline-block;
-            background: #f4c542;
-            color: #1e3a5f;
-            padding: 6px 18px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* school grid */
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 1.8rem 0 1.2rem 0;
-            border-left: 6px solid #e67e22;
-            padding-left: 20px;
-            color: #1f3b4c;
-        }
-
-        .school-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-            gap: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .school-card {
-            background: white;
-            border-radius: 1.2rem;
-            padding: 1rem 0.8rem;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.25s ease;
-            border: 1px solid #e2edf7;
-            cursor: default;
-        }
-
-        .school-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.12);
-            border-color: #cbdde9;
-        }
-
-        .school-card i {
-            font-size: 2.2rem;
-            background: #eef3fc;
-            padding: 12px;
-            border-radius: 60px;
-            color: #2c6e9e;
-            margin-bottom: 10px;
-        }
-
-        .school-card h3 {
+        .school-header p {
             font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
+            opacity: 0.9;
+            margin-top: 0.5rem;
         }
 
-        .school-card p {
-            font-size: 0.75rem;
-            color: #5a6e7c;
-        }
-
-        /* exam panel */
-        .exam-panel {
-            background: white;
-            border-radius: 2rem;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
-            margin: 2rem 0;
-            overflow: hidden;
-            transition: all 0.2s;
-        }
-
-        .panel-header {
-            background: #eef2f9;
-            padding: 1.2rem 2rem;
-            border-bottom: 2px solid #cddfe7;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .panel-header h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .status-badge {
-            background: #1f8a4c;
-            color: white;
-            padding: 5px 14px;
-            border-radius: 60px;
+        .badge-tag {
+            background: #ffd966cc;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
             font-size: 0.8rem;
             font-weight: 600;
+            color: #1e3a3a;
+            margin-top: 0.8rem;
         }
 
-        .exam-body {
-            padding: 2rem;
-        }
-
-        /* form style */
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        label {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 6px;
-            color: #1f4e6e;
-        }
-
-        input,
-        select {
-            width: 100%;
-            padding: 12px 16px;
-            border-radius: 1rem;
-            border: 1.5px solid #cbdde6;
-            font-size: 1rem;
-            transition: 0.2s;
-        }
-
-        input:focus,
-        select:focus {
-            outline: none;
-            border-color: #e67e22;
-            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
-        }
-
-        .btn {
-            background: #e67e22;
-            color: white;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: #1f6392;
-        }
-
-        .btn-primary:hover {
-            background: #0e4a70;
-            transform: scale(1.02);
-        }
-
-        .btn-warning {
-            background: #e67e22;
-        }
-
-        .btn-warning:hover {
-            background: #bf5e0a;
-        }
-
-        .mcq-area,
-        .subjective-area {
-            margin-top: 2rem;
-            border-top: 1px solid #e9eef3;
-            padding-top: 1.5rem;
-        }
-
-        .question-card {
-            background: #fafdff;
-            padding: 1rem;
-            border-radius: 1.2rem;
-            margin-bottom: 1.2rem;
+        /* filters */
+        .filters-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: flex-end;
             border: 1px solid #e2edf2;
         }
 
-        .options {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-            margin-top: 8px;
+        .filter-group {
+            flex: 1 1 200px;
         }
 
-        .option-item {
+        .filter-group label {
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: #2c6e6a;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            width: 100%;
+            padding: 0.7rem 0.8rem;
+            border-radius: 1rem;
+            border: 1px solid #cbdbe0;
+            background: #fefefe;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: #1b5e5a;
+            box-shadow: 0 0 0 3px rgba(27, 94, 90, 0.2);
+        }
+
+        .reset-btn {
+            background: #eef2f5;
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #1e4663;
+        }
+
+        .reset-btn:hover {
+            background: #dee4ea;
+        }
+
+        /* teacher grid */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 1.8rem;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+            transition: all 0.25s ease;
+            border: 1px solid #e5edf0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background: #f0f6f5;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 2px solid #d9e8e4;
+        }
+
+        .teacher-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .teacher-subject {
+            font-size: 0.85rem;
+            background: #e0f0ed;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 500;
+            color: #11554f;
+        }
+
+        .details {
+            padding: 1rem 1.5rem;
+            flex: 1;
+        }
+
+        .info-row {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
         }
 
-        textarea {
-            width: 100%;
+        .info-row i {
+            width: 24px;
+            color: #2c6e6a;
+            font-size: 1rem;
+        }
+
+        .class-teaches {
+            background: #f2f5f9;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .free-period {
+            background: #fff0db;
+            border-left: 4px solid #f4b942;
+            padding: 0.4rem 0.8rem;
             border-radius: 1rem;
-            border: 1.5px solid #cbdde6;
-            padding: 12px;
-            font-family: inherit;
+            font-weight: 500;
+            font-size: 0.8rem;
+            margin: 10px 0;
         }
 
-        .result-area {
-            margin-top: 1.5rem;
-            background: #eaf9f0;
-            border-radius: 1.5rem;
-            padding: 1.2rem;
-            display: none;
+        .exp-text {
+            font-size: 0.8rem;
+            color: #4b6a6e;
+            margin-top: 8px;
+            line-height: 1.4;
         }
 
-        .success-card {
-            background: #e0f2e9;
-            border-left: 6px solid #2b7e4b;
+        .staff-room {
+            font-weight: 600;
+            color: #0b4f4a;
         }
 
-        .fail-card {
-            background: #ffe8e6;
-            border-left: 6px solid #c73e2d;
+        .btn-book {
+            background: #1b5e5a;
+            color: white;
+            border: none;
+            padding: 0.6rem 0;
+            border-radius: 2rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 12px;
+            width: 100%;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .inline-icon {
-            margin-right: 6px;
+        .btn-book:hover {
+            background: #0f4440;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            font-size: 0.8rem;
+            border-top: 1px solid #e9eff2;
+            padding-top: 10px;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #1b5e5a;
+            font-weight: 500;
+        }
+
+        /* Booking panel */
+        .booking-section {
+            background: white;
+            border-radius: 1.8rem;
+            padding: 1.8rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+            border: 1px solid #dfeef0;
+        }
+
+        .booking-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0b3b3f;
+        }
+
+        .slot-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
+        .slot-badge {
+            background: #ecf9f5;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #cae3de;
+        }
+
+        .slot-badge:hover {
+            background: #cde9e3;
+            transform: scale(0.97);
+        }
+
+        .slot-badge.booked {
+            background: #d2dbe0;
+            text-decoration: line-through;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .booked-msg {
+            color: #ab4e3f;
+            font-size: 0.8rem;
+            margin-top: 12px;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border-color: #e2edea;
         }
 
         footer {
             text-align: center;
-            margin-top: 3rem;
-            padding: 1.5rem;
-            font-size: 0.8rem;
-            color: #5f7d95;
-            border-top: 1px solid #cde0ea;
+            font-size: 0.75rem;
+            color: #7b9ca0;
+            margin-top: 2.5rem;
         }
 
-        @media (max-width: 750px) {
-            .wrapper {
+        @media (max-width: 700px) {
+            body {
                 padding: 1rem;
             }
 
-            .hero h1 {
-                font-size: 1.8rem;
+            .teacher-name {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Hero Section -->
-        <div class="hero">
-            <h1><i class="fas fa-school-circle-check"></i> Admissions Open 2026-27</h1>
-            <p>Government & Private Schools of Haryana | Unified Admission Process March 2026</p>
-            <div class="badge-date"><i class="fas fa-calendar-alt"></i> Application Window: 1st March – 30th April 2026
-            </div>
-            <div style="margin-top: 12px; font-size: 0.9rem;"><i class="fas fa-flag-checkered"></i> Mandatory Entrance
-                Exam : MCQ (80%) + Subjective (20%) | Evaluate mindset & eligibility</div>
+    <div class="container">
+        <div class="school-header">
+            <h1><i class="fas fa-chalkboard-user"></i> K.R. Mangalam World School, Gurugram</h1>
+            <p>Excellence in Education · Staff Connect & Extra Class Scheduler</p>
+            <div class="badge-tag"><i class="fas fa-phone-alt"></i> 20+ Expert Faculty | Book Free Slots for Extra
+                Classes</div>
         </div>
 
-        <!-- List of Schools (atleast 15) -->
-        <div class="section-title"><i class="fas fa-landmark"></i> 🌟 Affiliated Schools of Haryana (2026-27 Session)
+        <!-- Filter area -->
+        <div class="filters-card">
+            <div class="filter-group">
+                <label><i class="fas fa-book-open"></i> Filter by Subject</label>
+                <select id="subjectFilter">
+                    <option value="all">All Subjects</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-users"></i> Filter by Class (Teaches)</label>
+                <select id="classFilter">
+                    <option value="all">All Classes</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-door-open"></i> Staff Room (Floor)</label>
+                <select id="floorFilter">
+                    <option value="all">All Floors</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-search"></i> Search Teacher</label>
+                <input type="text" id="searchName" placeholder="Name or subject...">
+            </div>
+            <button class="reset-btn" id="resetFilters"><i class="fas fa-undo-alt"></i> Reset</button>
         </div>
-        <div class="school-grid" id="schoolGrid"></div>
 
-        <!-- Admission Exam + Application Core -->
-        <div class="exam-panel" id="examPanel">
-            <div class="panel-header">
-                <h2><i class="fas fa-pen-to-square"></i> Eligibility Entrance Exam</h2>
-                <div class="status-badge"><i class="fas fa-clock"></i> Active: March 2026</div>
+        <!-- Teachers Grid -->
+        <div id="teachersContainer" class="teachers-grid"></div>
+
+        <!-- Booking Panel: show selected teacher slot booking -->
+        <div class="booking-section" id="bookingPanel">
+            <h3><i class="fas fa-calendar-plus"></i> Extra Class Scheduler</h3>
+            <div id="bookingInfo">
+                <p><i class="fas fa-info-circle"></i> Click <strong>"Book Extra Class Slot"</strong> on any teacher card
+                    to see their free periods & book a slot.</p>
             </div>
-            <div class="exam-body">
-                <p style="margin-bottom: 1.5rem; font-weight: 500;"><i class="fas fa-lightbulb"></i> All applicants must
-                    appear for the Haryana School Readiness Assessment (HSRA-2026). The score determines eligibility &
-                    stream recommendation. <strong>80% objective (MCQs) + 20% subjective (short answer).</strong>
-                    Passing mark: 50% overall.</p>
-
-                <!-- Student Details Form -->
-                <div style="background: #f9fbfe; border-radius: 1.5rem; padding: 1.2rem; margin-bottom: 1.8rem;">
-                    <h3><i class="fas fa-user-graduate"></i> Candidate Information</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div class="form-group">
-                            <label>Full Name *</label>
-                            <input type="text" id="studentName" placeholder="e.g. Aarav Sharma">
-                        </div>
-                        <div class="form-group">
-                            <label>Parent / Guardian</label>
-                            <input type="text" id="parentName" placeholder="Contact person">
-                        </div>
-                        <div class="form-group">
-                            <label>Preferred Class (2026-27)</label>
-                            <select id="classLevel">
-                                <option>Class 1</option>
-                                <option>Class 2</option>
-                                <option>Class 3</option>
-                                <option>Class 4</option>
-                                <option>Class 5</option>
-                                <option>Class 6</option>
-                                <option>Class 7</option>
-                                <option>Class 8</option>
-                                <option>Class 9</option>
-                                <option>Class 10</option>
-                                <option>Class 11</option>
-                                <option>Class 12</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Select School (any from list below)</label>
-                            <select id="selectedSchool">
-                                <!-- dynamic populated from same schools -->
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MCQ Section (8 Questions - 80% weightage) each correct 10pts , total 80 -->
-                <div class="mcq-area">
-                    <h3><i class="fas fa-check-circle"></i> Section A: Objective (MCQ) | 80 Marks (80%)</h3>
-                    <div id="mcqContainer"></div>
-                </div>
-
-                <!-- Subjective Section (2 questions - 20% weightage: 10 marks each = 20) -->
-                <div class="subjective-area">
-                    <h3><i class="fas fa-feather-alt"></i> Section B: Subjective (20 Marks) | 20%</h3>
-                    <div id="subjectiveContainer"></div>
-                </div>
-
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
-                    <button class="btn btn-primary" id="submitExamBtn"><i class="fas fa-paper-plane"></i> Submit Exam &
-                        Check Eligibility</button>
-                    <button class="btn" id="resetExamBtn" style="background:#6c757d;"><i class="fas fa-undo-alt"></i>
-                        Reset Form</button>
-                </div>
-
-                <!-- Result / Admission decision panel -->
-                <div id="resultPanel" class="result-area"></div>
-            </div>
+            <div id="dynamicSlotBooking"></div>
         </div>
         <footer>
-            <i class="fas fa-gavel"></i> Haryana School Education Board | Unified Admission Policy 2026-27. Entrance
-            exam mandatory for all applicants. <br>
-            © 2026 Department of School Education, Haryana.
+            <i class="fas fa-graduation-cap"></i> K.R. Mangalam World School, Gurugram — Empowering young minds • Staff
+            directory with real-time booking (demo schedule)
         </footer>
     </div>
 
     <script>
-        // ---------- DATABASE: minimum 15 schools of Haryana ----------
-        const schoolsList = [
-            "Delhi Public School, Gurugram", "The Shri Ram Universal School, Hisar", "Ryan International School, Panchkula",
-            "DAV Public School, Faridabad", "St. Stephen's School, Karnal", "Holy Child School, Sonipat",
-            "Army Public School, Ambala", "Blue Bells Model School, Gurugram", "Kendriya Vidyalaya No.1, Rohtak",
-            "Oxford Senior Secondary School, Yamunanagar", "S.D. Public School, Jhajjar", "Narayana e-Techno School, Panipat",
-            "Maharishi Dayanand School, Rewari", "Green Valley Public School, Bhiwani", "Tagore Bal Niketan, Sirsa",
-            "Little Flower Convent, Kurukshetra", "B.C.M. Arya Model School, Kaithal"
-        ]; // 17 schools >15
-
-        // MCQ bank (8 questions) - mental aptitude & logic, basic reasoning
-        const mcqQuestions = [
-            { text: "If a student studies 3 hours daily, how many total hours in 5 days?", options: ["12 hrs", "15 hrs", "18 hrs", "20 hrs"], correct: 1 },
-            { text: "Synonym of 'Intelligent'?", options: ["Clever", "Slow", "Lazy", "Weak"], correct: 0 },
-            { text: "What is 25% of 400?", options: ["80", "100", "120", "75"], correct: 1 },
-            { text: "Choose the correct spelling:", options: ["Acommodate", "Accommodate", "Acomodate", "Accomodate"], correct: 1 },
-            { text: "If 'TIGER' is coded as 'UJHFS', how is 'LION' coded?", options: ["MJPO", "MKPO", "MJOO", "MJOQ"], correct: 0 },
-            { text: "Which number is odd one out? 12, 24, 36, 47, 60", options: ["12", "24", "36", "47"], correct: 3 },
-            { text: "Find the next number: 2, 5, 10, 17, ?", options: ["24", "26", "28", "30"], correct: 1 },
-            { text: "Logical: All roses are flowers. Some flowers are red. Then:", options: ["All roses are red", "Some roses are red", "No conclusion", "Some red are roses"], correct: 2 }
+        // ---------- 20 TEACHERS DATA with deep details ----------
+        const teachersData = [
+            { id: 1, name: "Dr. Anjali Sharma", subject: "Physics", teachesClass: "11,12", staffRoom: "3rd Floor (Science Block)", experience: "15+ years in Physics, Ph.D. from Delhi University. Awarded 'Best Teacher' 2022. Mentored olympiad winners.", freePeriods: ["Mon 2:30-3:15", "Wed 11:00-11:45", "Fri 1:00-1:45"], email: "anjali.sharma@krmws.edu", phone: "+91-9876543210" },
+            { id: 2, name: "Rajesh Kumar", subject: "Mathematics", teachesClass: "9,10", staffRoom: "2nd Floor (Maths Dept)", experience: "12 years experience, specializes in Vedic Maths. Published 2 research papers.", freePeriods: ["Tue 10:15-11:00", "Thu 1:30-2:15", "Fri 9:30-10:15"], email: "rajesh.kumar@krmws.edu", phone: "+91-9876543211" },
+            { id: 3, name: "Priyanka Mehra", subject: "Chemistry", teachesClass: "11,12", staffRoom: "3rd Floor (Science Block)", experience: "9 years, innovative lab techniques. Guided students for JEE advanced.", freePeriods: ["Mon 12:30-1:15", "Wed 2:15-3:00", "Thu 10:00-10:45"], email: "priyanka.mehra@krmws.edu", phone: "+91-9876543212" },
+            { id: 4, name: "Vikram Singh", subject: "English Literature", teachesClass: "8,9,10", staffRoom: "1st Floor (Languages)", experience: "14 years, MA in English, creative writing club incharge.", freePeriods: ["Tue 1:00-1:45", "Fri 11:30-12:15", "Mon 9:45-10:30"], email: "vikram.singh@krmws.edu", phone: "+91-9876543213" },
+            { id: 5, name: "Neha Gupta", subject: "Computer Science", teachesClass: "9,10,11", staffRoom: "Ground Floor (IT Wing)", experience: "8 years, Python & AI specialist, certified by Microsoft.", freePeriods: ["Wed 1:15-2:00", "Thu 9:30-10:15", "Mon 2:45-3:30"], email: "neha.gupta@krmws.edu", phone: "+91-9876543214" },
+            { id: 6, name: "Sanjay Batra", subject: "History", teachesClass: "6,7,8", staffRoom: "2nd Floor (Social Science)", experience: "20 years, authored school history handbook. Excellent storyteller.", freePeriods: ["Fri 12:45-1:30", "Tue 8:45-9:30", "Thu 2:00-2:45"], email: "sanjay.batra@krmws.edu", phone: "+91-9876543215" },
+            { id: 7, name: "Kavita Nair", subject: "Political Science", teachesClass: "11,12", staffRoom: "2nd Floor (Social Science)", experience: "11 years, M.Phil, debate club mentor.", freePeriods: ["Mon 10:30-11:15", "Wed 12:15-1:00", "Fri 8:30-9:15"], email: "kavita.nair@krmws.edu", phone: "+91-9876543216" },
+            { id: 8, name: "Amit Tiwari", subject: "Biology", teachesClass: "10,11,12", staffRoom: "3rd Floor (Science Block)", experience: "10 years, botany expert, eco-club coordinator.", freePeriods: ["Tue 12:30-1:15", "Thu 11:45-12:30", "Mon 1:45-2:30"], email: "amit.tiwari@krmws.edu", phone: "+91-9876543217" },
+            { id: 9, name: "Swati Rastogi", subject: "Economics", teachesClass: "11,12", staffRoom: "1st Floor (Commerce Wing)", experience: "9 years, MBA finance, case study expert.", freePeriods: ["Wed 9:45-10:30", "Fri 2:00-2:45", "Tue 10:45-11:30"], email: "swati.rastogi@krmws.edu", phone: "+91-9876543218" },
+            { id: 10, name: "Rohit Malhotra", subject: "Business Studies", teachesClass: "11,12", staffRoom: "1st Floor (Commerce Wing)", experience: "13 years, corporate trainer, startup mentor.", freePeriods: ["Mon 11:15-12:00", "Thu 1:15-2:00", "Wed 8:30-9:15"], email: "rohit.malhotra@krmws.edu", phone: "+91-9876543219" },
+            { id: 11, name: "Meena Chawla", subject: "Hindi", teachesClass: "6,7,8,9", staffRoom: "1st Floor (Languages)", experience: "18 years, Hindi Sahitya awardee, authored poems.", freePeriods: ["Tue 9:45-10:30", "Fri 10:30-11:15", "Mon 12:45-1:30"], email: "meena.chawla@krmws.edu", phone: "+91-9876543220" },
+            { id: 12, name: "Arjun Nair", subject: "Physical Education", teachesClass: "5 to 10", staffRoom: "Ground Floor (Sports Complex)", experience: "7 years, national level basketball player, fitness coach.", freePeriods: ["Wed 2:30-3:15", "Thu 8:45-9:30", "Mon 9:15-10:00"], email: "arjun.nair@krmws.edu", phone: "+91-9876543221" },
+            { id: 13, name: "Deepa Menon", subject: "Psychology", teachesClass: "11,12", staffRoom: "2nd Floor (Humanities)", experience: "10 years, guidance counsellor, mindfulness expert.", freePeriods: ["Mon 8:30-9:15", "Tue 2:15-3:00", "Fri 1:45-2:30"], email: "deepa.menon@krmws.edu", phone: "+91-9876543222" },
+            { id: 14, name: "Kunal Arora", subject: "Accountancy", teachesClass: "11,12", staffRoom: "1st Floor (Commerce Wing)", experience: "12 years, CA inter, known for practical approach.", freePeriods: ["Thu 12:00-12:45", "Wed 10:30-11:15", "Mon 3:15-4:00"], email: "kunal.arora@krmws.edu", phone: "+91-9876543223" },
+            { id: 15, name: "Sonal Verma", subject: "Geography", teachesClass: "7,8,9,10", staffRoom: "2nd Floor (Social Science)", experience: "8 years, GIS certified, field trip organiser.", freePeriods: ["Fri 9:15-10:00", "Tue 11:30-12:15", "Thu 8:45-9:30"], email: "sonal.verma@krmws.edu", phone: "+91-9876543224" },
+            { id: 16, name: "Manish Joshi", subject: "Sanskrit", teachesClass: "6,7,8", staffRoom: "1st Floor (Languages)", experience: "15 years, Vedic scholar, 'Shiromani Award'.", freePeriods: ["Wed 12:45-1:30", "Mon 10:15-11:00", "Fri 2:30-3:15"], email: "manish.joshi@krmws.edu", phone: "+91-9876543225" },
+            { id: 17, name: "Ritu Desai", subject: "Art & Craft", teachesClass: "3 to 8", staffRoom: "Ground Floor (Art Studio)", experience: "10 years, fine arts degree, exhibitions curated.", freePeriods: ["Thu 10:45-11:30", "Tue 1:30-2:15", "Wed 9:15-10:00"], email: "ritu.desai@krmws.edu", phone: "+91-9876543226" },
+            { id: 18, name: "Gaurav Sethi", subject: "Music", teachesClass: "4 to 10", staffRoom: "Ground Floor (Performing Arts)", experience: "9 years, vocal trainer, school choir incharge.", freePeriods: ["Mon 1:00-1:45", "Fri 8:45-9:30", "Tue 10:15-11:00"], email: "gaurav.sethi@krmws.edu", phone: "+91-9876543227" },
+            { id: 19, name: "Pallavi Bhatia", subject: "Home Science", teachesClass: "9,10,11", staffRoom: "2nd Floor (Vocational)", experience: "6 years, nutritionist, lifestyle coach.", freePeriods: ["Wed 8:45-9:30", "Thu 2:45-3:30", "Mon 11:45-12:30"], email: "pallavi.bhatia@krmws.edu", phone: "+91-9876543228" },
+            { id: 20, name: "Yogesh Sharma", subject: "Robotics", teachesClass: "6,7,8,9", staffRoom: "Ground Floor (Innovation Lab)", experience: "5 years, robotics championship mentor, IIT workshop alum.", freePeriods: ["Fri 11:00-11:45", "Tue 8:30-9:15", "Thu 1:30-2:15"], email: "yogesh.sharma@krmws.edu", phone: "+91-9876543229" }
         ];
 
-        // Subjective questions (2 Questions, each 10 marks, 20% weight)
-        const subjectiveQuestions = [
-            { text: "Briefly explain why you want to join this school and how you plan to contribute to the learning environment? (Answer in 2-3 lines)", maxMarks: 10 },
-            { text: "Describe a challenge you faced recently and how you solved it. (minimum 30 words)", maxMarks: 10 }
-        ];
+        // booking store: key = teacherId_slotString => booked true/false
+        let bookings = new Map(); // key: `${teacherId}_${slotText}`
 
-        // render school grid and populate dropdowns
-        function renderSchools() {
-            const grid = document.getElementById('schoolGrid');
-            grid.innerHTML = '';
-            schoolsList.forEach(school => {
-                const card = document.createElement('div');
-                card.className = 'school-card';
-                card.innerHTML = `<i class="fas fa-building"></i><h3>${school.length > 25 ? school.substring(0, 22) + '..' : school}</h3><p>📍 Haryana | Grade 1-12</p>`;
-                grid.appendChild(card);
+        // DOM elements
+        const teachersContainer = document.getElementById('teachersContainer');
+        const subjectFilter = document.getElementById('subjectFilter');
+        const classFilter = document.getElementById('classFilter');
+        const floorFilter = document.getElementById('floorFilter');
+        const searchName = document.getElementById('searchName');
+        const resetBtn = document.getElementById('resetFilters');
+        const dynamicSlotBooking = document.getElementById('dynamicSlotBooking');
+        const bookingInfo = document.getElementById('bookingInfo');
+
+        let selectedTeacherForBooking = null; // store teacher obj
+
+        // Helper: populate filter dropdowns dynamically
+        function populateFilters() {
+            const subjectsSet = new Set();
+            const classesSet = new Set();
+            const floorsSet = new Set();
+            teachersData.forEach(t => {
+                subjectsSet.add(t.subject);
+                t.teachesClass.split(',').forEach(c => classesSet.add(c.trim()));
+                floorsSet.add(t.staffRoom);
             });
-            // populate select dropdown
-            const selectSchool = document.getElementById('selectedSchool');
-            if (selectSchool) {
-                selectSchool.innerHTML = '';
-                schoolsList.forEach(school => {
-                    let option = document.createElement('option');
-                    option.value = school;
-                    option.textContent = school;
-                    selectSchool.appendChild(option);
-                });
-            }
-        }
-
-        // generate MCQ HTML
-        function buildMCQ() {
-            const container = document.getElementById('mcqContainer');
-            container.innerHTML = '';
-            mcqQuestions.forEach((q, idx) => {
-                const qDiv = document.createElement('div');
-                qDiv.className = 'question-card';
-                qDiv.innerHTML = `<strong>Q${idx + 1}. ${q.text}</strong><div class="options" id="mcq-${idx}"></div>`;
-                container.appendChild(qDiv);
-                const optsDiv = qDiv.querySelector(`.options`);
-                q.options.forEach((opt, optIdx) => {
-                    const radioId = `mcq_${idx}_opt${optIdx}`;
-                    const label = document.createElement('label');
-                    label.className = 'option-item';
-                    label.innerHTML = `<input type="radio" name="mcq_${idx}" value="${optIdx}"> <span>${opt}</span>`;
-                    optsDiv.appendChild(label);
-                });
+            // subject
+            subjectFilter.innerHTML = '<option value="all">All Subjects</option>';
+            Array.from(subjectsSet).sort().forEach(s => {
+                subjectFilter.innerHTML += `<option value="${s}">${s}</option>`;
+            });
+            // class
+            classFilter.innerHTML = '<option value="all">All Classes</option>';
+            Array.from(classesSet).sort().forEach(c => {
+                classFilter.innerHTML += `<option value="${c}">Class ${c}</option>`;
+            });
+            // floor
+            floorFilter.innerHTML = '<option value="all">All Floors</option>';
+            Array.from(floorsSet).forEach(f => {
+                floorFilter.innerHTML += `<option value="${f}">${f}</option>`;
             });
         }
 
-        // Subjective HTML
-        function buildSubjective() {
-            const container = document.getElementById('subjectiveContainer');
-            container.innerHTML = '';
-            subjectiveQuestions.forEach((sq, idx) => {
-                const qDiv = document.createElement('div');
-                qDiv.className = 'question-card';
-                qDiv.innerHTML = `<strong>Subjective ${idx + 1}. (${sq.maxMarks} marks)</strong><br>${sq.text}<br><textarea rows="3" id="subj_${idx}" placeholder="Write your answer here..."></textarea>`;
-                container.appendChild(qDiv);
-            });
-        }
+        // render teacher cards based on filters
+        function renderTeachers() {
+            const subjectVal = subjectFilter.value;
+            const classVal = classFilter.value;
+            const floorVal = floorFilter.value;
+            const searchVal = searchName.value.toLowerCase();
 
-        // evaluate exam and decide eligibility
-        function evaluateAndShowResult() {
-            // Get student details
-            const studentName = document.getElementById('studentName').value.trim();
-            const parentName = document.getElementById('parentName').value.trim();
-            const classLevel = document.getElementById('classLevel').value;
-            const selectedSchool = document.getElementById('selectedSchool').value;
-
-            if (!studentName) {
-                alert("Please enter student's full name before submitting.");
-                return false;
-            }
-
-            // ---- MCQs scoring (80 marks) ----
-            let mcqScore = 0;
-            for (let i = 0; i < mcqQuestions.length; i++) {
-                const selected = document.querySelector(`input[name="mcq_${i}"]:checked`);
-                if (selected && parseInt(selected.value) === mcqQuestions[i].correct) {
-                    mcqScore += 10;   // each correct 10 marks -> total 80 possible
+            const filtered = teachersData.filter(teacher => {
+                if (subjectVal !== 'all' && teacher.subject !== subjectVal) return false;
+                if (classVal !== 'all') {
+                    const teachesClasses = teacher.teachesClass.split(',').map(c => c.trim());
+                    if (!teachesClasses.includes(classVal)) return false;
                 }
+                if (floorVal !== 'all' && teacher.staffRoom !== floorVal) return false;
+                if (searchVal !== '') {
+                    if (!teacher.name.toLowerCase().includes(searchVal) && !teacher.subject.toLowerCase().includes(searchVal)) return false;
+                }
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                teachersContainer.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:3rem;">No teachers match criteria. <i class="fas fa-chalkboard"></i></div>`;
+                return;
             }
 
-            // ---- Subjective scoring (20 marks) ----
-            let subjScore = 0;
-            // For demo, we apply a fair but evaluator-like auto scoring: check if non-empty and length > 15 char gives marks (each up to 10)
-            // Realistic: we simulate evaluation heuristics (no empty, reasoning keyword)
-            const subjAnswer0 = document.getElementById('subj_0')?.value.trim() || '';
-            const subjAnswer1 = document.getElementById('subj_1')?.value.trim() || '';
-
-            // subjective Q0: up to 10 marks (min 10 chars)
-            if (subjAnswer0.length >= 12) {
-                let marks0 = 8;
-                if (subjAnswer0.length > 40) marks0 = 10;
-                else if (subjAnswer0.length > 20) marks0 = 9;
-                subjScore += marks0;
-            } else if (subjAnswer0.length > 0) {
-                subjScore += 4;
-            } else {
-                subjScore += 0;
-            }
-
-            // subjective Q1: challenge solving - up to 10
-            if (subjAnswer1.length >= 20) {
-                let marks1 = 8;
-                if (subjAnswer1.length > 55) marks1 = 10;
-                else if (subjAnswer1.length > 30) marks1 = 9;
-                subjScore += marks1;
-            } else if (subjAnswer1.length > 5) {
-                subjScore += 3;
-            } else {
-                subjScore += 0;
-            }
-
-            const totalScore = mcqScore + subjScore;
-            const maxPossible = 100;
-            const percentage = (totalScore / maxPossible) * 100;
-            const isEligible = percentage >= 50;
-
-            // Result Panel display
-            const resultDiv = document.getElementById('resultPanel');
-            resultDiv.style.display = 'block';
-
-            let eligibilityText = '';
-            let cardClass = '';
-            if (isEligible) {
-                eligibilityText = `✅ ELIGIBLE for Admission! 🎉 Based on your mindset assessment (${percentage.toFixed(1)}%), you qualify for ${selectedSchool}. Admission counselors will contact you for document verification.`;
-                cardClass = 'success-card';
-            } else {
-                eligibilityText = `❌ Not Eligible this time. Your score ${percentage.toFixed(1)}% is below 50% threshold. We encourage you to reappear in next cycle or try alternative schools with foundation program.`;
-                cardClass = 'fail-card';
-            }
-
-            // Additional message about objective/subjective split
-            resultDiv.innerHTML = `
-            <div class="${cardClass}" style="padding:1rem; border-radius:1.2rem;">
-                <h3><i class="fas fa-clipboard-list"></i> HSRA-2026 Result - ${studentName}</h3>
-                <p><strong>🎯 Objective Score (80% weight):</strong> ${mcqScore}/80 &nbsp;|&nbsp; <strong>📝 Subjective Score (20%):</strong> ${subjScore}/20</p>
-                <p><strong>⭐ Total Score:</strong> ${totalScore}/100 (${percentage.toFixed(1)}%) | Required cut-off: 50%</p>
-                <p><i class="fas fa-school"></i> <strong>Applied School:</strong> ${selectedSchool} | Class: ${classLevel}</p>
-                <p style="font-size:1.1rem; margin-top: 8px;">${eligibilityText}</p>
-                ${isEligible ? `<button id="confirmAdmissionBtn" class="btn btn-primary" style="margin-top:12px;"><i class="fas fa-envelope-open-text"></i> Proceed to Admission Form</button>` : `<button class="btn" id="retryBtn" style="background:#5a6268;"><i class="fas fa-redo-alt"></i> Try Exam Again</button>`}
+            teachersContainer.innerHTML = filtered.map(teacher => `
+            <div class="teacher-card">
+                <div class="card-header">
+                    <div class="teacher-name">
+                        ${teacher.name}
+                        <span class="teacher-subject">${teacher.subject}</span>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="info-row"><i class="fas fa-users"></i> <strong>Teaches Class:</strong> <span class="class-teaches">${teacher.teachesClass}</span></div>
+                    <div class="info-row"><i class="fas fa-door-closed"></i> <strong>Staff Room:</strong> <span class="staff-room">${teacher.staffRoom}</span></div>
+                    <div class="info-row"><i class="fas fa-hourglass-half"></i> <strong>Free Periods:</strong> ${teacher.freePeriods.map(p => `<span class="free-period" style="background:#f9f3e0; margin:2px;">${p}</span>`).join(' ')}</div>
+                    <div class="exp-text"><i class="fas fa-globe"></i> <strong>Experience:</strong> ${teacher.experience}</div>
+                    <div class="contact-links">
+                        <a href="mailto:${teacher.email}"><i class="fas fa-envelope"></i> ${teacher.email}</a>
+                        <a href="tel:${teacher.phone}"><i class="fas fa-phone-alt"></i> ${teacher.phone}</a>
+                    </div>
+                    <button class="btn-book" data-id="${teacher.id}"><i class="fas fa-calendar-check"></i> Book Extra Class Slot</button>
+                </div>
             </div>
-        `;
+        `).join('');
 
-            if (isEligible) {
-                const confirmBtn = document.getElementById('confirmAdmissionBtn');
-                if (confirmBtn) {
-                    confirmBtn.addEventListener('click', () => {
-                        alert(`🎉 Admission request submitted successfully for ${studentName} at ${selectedSchool}. School admin will contact within 3 days.\n\n📅 Session 2026-27, Haryana Board.`);
-                    });
+            // attach booking event handlers to each button
+            document.querySelectorAll('.btn-book').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = parseInt(btn.dataset.id);
+                    const teacher = teachersData.find(t => t.id === id);
+                    if (teacher) {
+                        selectedTeacherForBooking = teacher;
+                        showBookingInterface(teacher);
+                    }
+                });
+            });
+        }
+
+        // show booking slots for selected teacher
+        function showBookingInterface(teacher) {
+            bookingInfo.innerHTML = `<p><i class="fas fa-chalkboard-user"></i> <strong>${teacher.name} (${teacher.subject})</strong> — Select a free slot for extra class. Teacher's free periods: ${teacher.freePeriods.join(', ')}</p>`;
+            const slots = teacher.freePeriods;
+            if (!slots.length) {
+                dynamicSlotBooking.innerHTML = `<div class="booked-msg">No free periods available at the moment.</div>`;
+                return;
+            }
+            let slotsHtml = `<div class="slot-list">${slots.map(slot => {
+                const key = `${teacher.id}_${slot}`;
+                const isBooked = bookings.get(key) === true;
+                return `<div class="slot-badge ${isBooked ? 'booked' : ''}" data-slot="${slot}" data-teacherid="${teacher.id}">
+                        <i class="fas ${isBooked ? 'fa-ban' : 'fa-clock'}"></i> ${slot} ${isBooked ? '(Booked)' : '(Available)'}
+                    </div>`;
+            }).join('')}</div>`;
+            slotsHtml += `<div id="slotFeedbackMsg" style="margin-top: 12px;"></div>`;
+            dynamicSlotBooking.innerHTML = slotsHtml;
+
+            // attach click handlers for slot badges
+            document.querySelectorAll('.slot-badge').forEach(badge => {
+                const slot = badge.dataset.slot;
+                const tId = parseInt(badge.dataset.teacherid);
+                const key = `${tId}_${slot}`;
+                if (bookings.get(key) === true) {
+                    badge.style.cursor = 'not-allowed';
+                    return;
                 }
-            } else {
-                const retryBtn = document.getElementById('retryBtn');
-                if (retryBtn) retryBtn.addEventListener('click', () => resetExamForm());
-            }
-
-            // scroll to result
-            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            return true;
+                badge.addEventListener('click', () => {
+                    if (bookings.get(key) === true) {
+                        document.getElementById('slotFeedbackMsg').innerHTML = `<span class="booked-msg"><i class="fas fa-times-circle"></i> Slot already taken.</span>`;
+                        return;
+                    }
+                    // confirm booking
+                    if (confirm(`Book extra class with ${teacher.name} on ${slot} ?`)) {
+                        bookings.set(key, true);
+                        document.getElementById('slotFeedbackMsg').innerHTML = `<span style="color:#1b6b5e;"><i class="fas fa-check-circle"></i> Booked! ${teacher.name} on ${slot}. Teacher will confirm shortly.</span>`;
+                        // refresh both the slot ui and re-render teacher cards (to update any visual? but we keep simple)
+                        showBookingInterface(teacher); // refresh slot list
+                        renderTeachers(); // reflect updated booking on card? teacher card may show slot status? we just update overall
+                    }
+                });
+            });
         }
 
-        // reset all exam inputs and result panel
-        function resetExamForm() {
-            // reset radio mcq
-            for (let i = 0; i < mcqQuestions.length; i++) {
-                const radios = document.querySelectorAll(`input[name="mcq_${i}"]`);
-                radios.forEach(r => r.checked = false);
-            }
-            // clear textareas
-            for (let i = 0; i < subjectiveQuestions.length; i++) {
-                const ta = document.getElementById(`subj_${i}`);
-                if (ta) ta.value = '';
-            }
-            // optional: student name not cleared for convenience but resetting optional fields
-            document.getElementById('studentName').value = '';
-            document.getElementById('parentName').value = '';
-            const resultPanel = document.getElementById('resultPanel');
-            resultPanel.style.display = 'none';
-            resultPanel.innerHTML = '';
-            // default school select first
-            if (schoolsList.length) document.getElementById('selectedSchool').selectedIndex = 0;
-            alert("Exam form has been reset. Fill details and retake the entrance test.");
+        // reset all filters and also selected teacher booking panel reset optional
+        function resetFilters() {
+            subjectFilter.value = 'all';
+            classFilter.value = 'all';
+            floorFilter.value = 'all';
+            searchName.value = '';
+            renderTeachers();
+            // reset booking panel to default message but keep selected teacher null
+            selectedTeacherForBooking = null;
+            bookingInfo.innerHTML = `<p><i class="fas fa-info-circle"></i> Click <strong>"Book Extra Class Slot"</strong> on any teacher card to see their free periods & book a slot.</p>`;
+            dynamicSlotBooking.innerHTML = '';
         }
 
-        // initialize dynamic content and event listeners
-        document.addEventListener('DOMContentLoaded', () => {
-            renderSchools();
-            buildMCQ();
-            buildSubjective();
+        // event listeners
+        subjectFilter.addEventListener('change', () => renderTeachers());
+        classFilter.addEventListener('change', () => renderTeachers());
+        floorFilter.addEventListener('change', () => renderTeachers());
+        searchName.addEventListener('input', () => renderTeachers());
+        resetBtn.addEventListener('click', resetFilters);
 
-            const submitBtn = document.getElementById('submitExamBtn');
-            const resetBtn = document.getElementById('resetExamBtn');
-            submitBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                evaluateAndShowResult();
-            });
-            resetBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                resetExamForm();
-            });
-            // extra: elegant default message on panel
-            const resultDiv = document.getElementById('resultPanel');
-            resultDiv.style.display = 'none';
-        });
+        // initial load
+        populateFilters();
+        renderTeachers();
+        // default panel message
+        bookingInfo.innerHTML = `<p><i class="fas fa-info-circle"></i> Click <strong>"Book Extra Class Slot"</strong> on any teacher card to see their free periods & book a slot.</p>`;
+        dynamicSlotBooking.innerHTML = '';
     </script>
 </body>
 
